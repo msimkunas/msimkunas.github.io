@@ -1,0 +1,37 @@
+title: Manto Šimkūno tinklaraštis
+description: >-
+  Rašau įvairios tematikos tekstus, domiuosi IT naujovėmis. PHP programuotojas, kažką ten prie kompiuterių.
+baseurl: ""
+url: "https://msimkunas.lt"
+linkedin_username: msimkunas
+github_username: msimkunas
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+minima:
+  date_format: "%Y-%m-%d"
+
+show_excerpts: true
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

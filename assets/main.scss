@@ -1,0 +1,67 @@
+---
+---
+
+@import "minima";
+
+.site-header {
+    border: none;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+
+    p {
+        margin: 0;
+    }
+
+    @media (min-width: 400px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 650px) {
+        max-width: 30em;
+    }
+}
+
+.profile-picture {
+    display: block;
+    width: 6em;
+    height: 6em;
+    border-radius: 100%;
+}
+
+.profile-description {
+    text-align: center;
+    font-size: 15px;
+    color: #828282;
+
+    @media (min-width: 400px) {
+        text-align: left;
+    }
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    @media (min-width: 650px) {
+        flex-direction: row;
+    }
+}
+
+.read-more-link {
+    display: block;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.social-media-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
