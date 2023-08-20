@@ -1,9 +1,15 @@
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-wrapper">
-      <div class="profile-card">
-        <img class="profile-picture" src="{{ "/assets/images/mantas.jpg" | relative_url }}" alt="Mantas" />
-        <p class="profile-description">{{- site.description | escape -}}</p>
+      <div>
+        <h3>Apie mane</h3>
+
+        <div class="profile-card">
+          <a class="profile-link" rel="author" href="{{ "/" | relative_url }}">
+            <img class="profile-picture" src="{{ "/assets/images/mantas.jpg" | relative_url }}" alt="Mantas" />
+          </a>
+          <p class="profile-description">{{- site.description | escape -}}</p>
+        </div>
       </div>
 
       {%- include social.html -%}

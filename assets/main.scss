@@ -26,6 +26,12 @@
     }
 }
 
+.profile-link {
+    display: block;
+    min-width: 6em;
+    min-height: 6em;
+}
+
 .profile-picture {
     display: block;
     width: 6em;
@@ -64,4 +70,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    li a {
+        display: flex;
+        align-items: center;
+    }
+
+    @media (min-width: 650px) {
+        align-items: flex-start;
+        margin-top: 48px;
+    }
+}
+
+.back-link {
+    padding: 16px 0;
+    display: inline-block;
+    font-size: 20px;
+
+    span {
+        color: #424242;
+    }
+
+    &,
+    &:visited {
+        color: #424242;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
