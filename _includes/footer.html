@@ -1,14 +1,13 @@
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-wrapper">
-      <div class="profile-card-wrapper">
-        <h3 class="profile-card-title">Apie mane</h3>
-
-        <div class="profile-card">
-          <a class="profile-link" rel="author" href="{{ "/" | relative_url }}">
-            <img class="profile-picture" src="{{ "/assets/images/mantas.jpg" | relative_url }}" alt="Mantas" />
-          </a>
-          <p class="profile-description">{{- site.description | escape -}}</p>
+      <div class="profile-card">
+        <a class="profile-link" rel="author" href="{{ "/" | relative_url }}">
+          <img class="profile-picture" src="{{ "/assets/images/mantas.jpg" | relative_url }}" alt="Mantas" />
+        </a>
+        <div class="profile-description">
+          <h4 class="profile-name">Mantas Šimkūnas</h4>
+          <p>{{- site.description | escape -}}</p>
         </div>
       </div>
 

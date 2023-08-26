@@ -39,6 +39,12 @@
     border-radius: 100%;
 }
 
+.profile-name {
+    font-size: 20px;
+    color: #111;
+    margin-bottom: 5px;
+}
+
 .profile-description {
     text-align: center;
     font-size: 15px;
@@ -54,23 +60,9 @@
     flex-direction: column;
     gap: 2em;
 
-    @media (min-width: 650px) {
+    @media (min-width: 600px) {
         flex-direction: row;
     }
-}
-
-.profile-card-title {
-    display: block;
-    text-align: center;
-
-    @media (min-width: 400px) {
-        text-align: left;
-    }
-}
-
-.read-more-link {
-    display: block;
-    font-size: 16px;
 }
 
 .social-media-list {
@@ -84,15 +76,24 @@
         align-items: center;
     }
 
-    @media (min-width: 650px) {
+    @media (min-width: 600px) {
         align-items: flex-start;
-        margin-top: 48px;
+        margin-top: 24px;
     }
 }
 
+.read-more-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
 .back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 16px 0;
-    display: inline-block;
     font-size: 20px;
 
     span {
@@ -107,4 +108,14 @@
     &:hover {
         text-decoration: none;
     }
+}
+
+.next-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.back-icon {
+    width: 20px;
+    height: 20px;
 }
