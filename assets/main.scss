@@ -89,16 +89,22 @@
     font-size: 16px;
 }
 
+.next-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.back-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .back-link {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 16px 0;
     font-size: 20px;
-
-    span {
-        color: #424242;
-    }
 
     &,
     &:visited {
@@ -110,12 +116,21 @@
     }
 }
 
-.next-icon {
-    width: 16px;
-    height: 16px;
+.back-link-title {
+    color: #424242;
 }
 
-.back-icon {
-    width: 20px;
-    height: 20px;
+.label-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.label-title {}
+
+.label-subtitle {
+    position: relative;
+    top: -5px;
+    font-size: 14px;
+    color: #888;
 }
