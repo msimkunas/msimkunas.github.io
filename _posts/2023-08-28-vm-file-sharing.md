@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why you should keep your files inside your VM"
+title: "Why you should keep files inside your VM"
 date: 2023-08-28
 ---
 If you're virtualizing your development environments with VMs then you're probably aware that there are plenty of ways to share your project files with the virtual machine. You probably also know that if you're working with non trivial projects, pretty much all of those methods have shortcomings.
