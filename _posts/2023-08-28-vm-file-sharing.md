@@ -9,6 +9,8 @@ I should perhaps clarify my specific use case here. I'm running a local VM for w
 
 Some commenters have pointed out VirtioFS. This is a valid option that I have not yet explored. However, I always give preference to solutions that work out of the box and don't require installing additional support software on the host which is why VirtioFS is a no-go for me on Windows. I'm not using Windows for development at this time but my goal is to have a general approach that could work across different hosts. Currently this means sharing directories via NFS on Unix-y hosts and using Samba on Windows.
 
+---
+
 If you're virtualizing your development environments with VMs then you're probably aware that there are plenty of ways to share your project files with the virtual machine. You probably also know that if you're working with non trivial projects, pretty much all of those methods have shortcomings.
 
 This article is based on my experiences with Vagrant over the years (and, more recently, Multipass) but it can easily apply to other virtualization tools which utilise the file sharing/syncing methods mentioned below.
