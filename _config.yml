@@ -15,7 +15,7 @@ plugins:
 minima:
   date_format: "%Y-%m-%d"
 
-show_excerpts: true
+show_excerpts: false
 
 lang: lt-LT
 
