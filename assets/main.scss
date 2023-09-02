@@ -141,3 +141,17 @@
     border: none;
     border-top: 3px dashed #cfd9e2;
 }
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h3, li {
+        margin: 0;
+    }
+}
+
+.post-link {
+    font-size: 20px;
+}
