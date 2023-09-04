@@ -3,14 +3,6 @@ layout: post
 title: "Why you should keep files inside your VM"
 date: 2023-08-28
 ---
-_Update (2023-09-01)_: This article has also been [posted on HN](https://news.ycombinator.com/item?id=37343274).
-
-I should perhaps clarify my specific use case here. I'm running a local VM for web development and I use the VM to isolate the various development tools. My threat model assumes that I trust the guest – this means that sandbox escape is not a security concern of mine.
-
-Some commenters have pointed out VirtioFS. This is a valid option that I have not yet explored. However, I always give preference to solutions that work out of the box and don't require installing additional support software on the host which is why VirtioFS is a no-go for me on Windows. I'm not using Windows for development at this time but my goal is to have a general approach that could work across different hosts. Currently this means sharing directories via NFS on Unix-y hosts and using Samba on Windows.
-
----
-
 If you're virtualizing your development environments with VMs then you're probably aware that there are plenty of ways to share your project files with the virtual machine. You probably also know that if you're working with non trivial projects, pretty much all of those methods have shortcomings.
 
 This article is based on my experiences with Vagrant over the years (and, more recently, Multipass) but it can easily apply to other virtualization tools which utilise the file sharing/syncing methods mentioned below.
@@ -57,3 +49,11 @@ Instead of sharing your files with the guest VM, you should consider storing the
 The only downside of this approach that I can see is reduced file IO performance on the host which should be tolerable in most cases. If you're using something like PhpStorm, your IDE may take a little longer to index your project if it accesses it on a mounted network share but such IO-heavy operations are usually not done very often and it's therefore a small price to pay for the benefits of being able to run your application on a native file system along with all other advantages this entails. And if you're using VSCode, there are remote development extensions that will allow you to view your files directly in the editor via SSH so there's no need for manual mounting.
 
 This feels like the most robust setup I've tried because the responsibility of sharing your files is not offloaded to the host. Generally, if you're working with VMs you'll probably want to isolate as much as possible inside the VM to reduce friction when setting up VMs on different hosts. File sharing and networking are usually the two main pain points of working with VMs for me, with the latter one being the lesser of the two.
+
+---
+
+_Update (2023-09-01)_: This article has also been [posted on HN](https://news.ycombinator.com/item?id=37343274).
+
+I should perhaps clarify my specific use case here. I'm running a local VM for web development and I use the VM to isolate the various development tools. My threat model assumes that I trust the guest – this means that sandbox escape is not a security concern of mine.
+
+Some commenters have pointed out VirtioFS. This is a valid option that I have not yet explored. However, I always give preference to solutions that work out of the box and don't require installing additional support software on the host which is why VirtioFS is a no-go for me on Windows. I'm not using Windows for development at this time but my goal is to have a general approach that could work across different hosts. Currently this means sharing directories via NFS on Unix-y hosts and using Samba on Windows.
