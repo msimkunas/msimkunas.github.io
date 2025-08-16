@@ -3,6 +3,13 @@ layout: post
 title: "Isolating Docker inside a development VM"
 date: 2023-12-12
 ---
+
+_Update (2025-05-11)_: Docker v28 has [introduced](https://www.docker.com/blog/docker-engine-28-hardening-container-networking-by-default/) significant changes to container security by default.
+
+While it's great that Docker is aiming for a more hardened out of the box experience, my personal stance on this remains unchanged – I would still choose to contain Docker inside a VM whenever possible. As has also been [remarked by others](https://github.com/moby/moby/issues/22054#issuecomment-2854488866), this is mostly because there's far less complexity and cognitive overhead involved in spinning up a VM when compared to installing complex software directly on the host. I prefer to treat any tool that messes with my firewall directly as something to be contained rather than implicitly trusted to do the right thing. It helps that I have structured my entire workflow around virtualization over the years, too.
+
+---
+
 One of the biggest gotchas that I've experienced when using Docker was how it handles the firewall rules. Apparently, if you’ve set your `iptables` firewall up to deny incoming connections you might be less than pleasantly surprised to find out that Docker actually _modifies your `iptables` rules and exposes your containers to other hosts on the same network_.
 
 **Note:** I should clarify that I am definitely not an expert on Docker or Unix networking in general. However, based on my findings which I detail below, I can easily reproduce the issue and my suggested solution should be reasonably effective (provided your environment allows encapsulating Docker inside a VM, of course).
